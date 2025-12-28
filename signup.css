@@ -1,0 +1,67 @@
+body {
+    background-color: #f4f4f4; /* Background behind the card */
+    font-family: 'Quicksand', sans-serif;
+}
+
+.heading-font {
+   font-family: "Londrina Solid", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+
+.consultation-card {
+    background-color: #e6842a; /* Main Orange Color */
+    max-width: 500px;
+    width: 100%;
+    border-radius: 40px; /* Large rounded corners */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.dog-illustration {
+    position: absolute;
+    top: -60px;
+    left: 20px;
+}
+
+.custom-input {
+    border-radius: 30px;
+    padding: 12px 20px;
+    border: none;
+    color: #666;
+}
+
+.custom-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
+    border: none;
+}
+
+.btn-submit {
+    background-color: #3d3430; /* Dark brown/charcoal button */
+    border: none;
+    font-size: 1.1rem;
+    transition: transform 0.2s;
+}
+
+.btn-submit:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+    color: #3d3430;
+}
+
+.ls-wide {
+    letter-spacing: 1px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 576px) {
+    .consultation-card {
+        border-radius: 25px;
+        margin: 10px;
+    }
+    .dog-illustration {
+        width: 70px;
+        top: -45px;
+    }
+}

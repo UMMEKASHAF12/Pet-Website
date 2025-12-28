@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Information</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="addproduct.css" />
+    <link rel="stylesheet" href="contact .css">
+</head>
+
+<body>
+
+    <div class="page-container">
+        <aside class="sidebar">
+            <div class="logo">Fastkart.</div>
+            <ul class="menu">
+                <a href="./index.html">
+                    <li>Dashboard</li>
+                </a>
+
+                <a href="./addproduct.html">
+                    <li class="active">Product</li>
+                </a>
+
+                <li>Category</li>
+                <li>Attributes</li>
+                <li>Users</li>
+                <li>Roles</li>
+                <li>Media</li>
+                <li>Orders</li>
+                <li>Reports</li>
+            </ul>
+        </aside>
+        <section class="product-wrapper">
+
+            <div>
+                <h2 class="form-title">Product Information</h2>
+
+                <form class="productform">
+                    <div class="form-row">
+                        <label for="product-name">Product Name</label>
+                        <input type="text" id="product" placeholder="Product Name" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="product-type">Price</label>
+                        <input type="text" id="price" placeholder="$" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="category">Category</label>
+                        <input type="text" id="category" placeholder="Category" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="brand">Choose File</label>
+                        <input type="file" />
+                    </div>
+
+                    <div class="form-row">
+                        <label for="tags">Description</label>
+                        <input type="text" id="description" placeholder="Type tag & hit enter" />
+                    </div>
+
+                    <div class="toggle-row">
+                        <span>Exchangeable</span>
+                        <label class="switch">
+                            <input type="checkbox" id="exchangeable" />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+
+                    <div class="toggle-row">
+                        <span>Refundable</span>
+                        <label class="switch">
+                            <input type="checkbox" id="refundable" checked />
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </div>
+    <script type="module" src="product.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+</body>
+
+</html>
