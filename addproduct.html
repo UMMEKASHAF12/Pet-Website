@@ -9,8 +9,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
-    <link rel="stylesheet" href="addproduct.css" />
-    <link rel="stylesheet" href="contact .css">
+   <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="addproduct.css" />
+
+    
 </head>
 
 <body>
@@ -41,7 +43,9 @@
             <div>
                 <h2 class="form-title">Product Information</h2>
 
-                <form class="productform">
+                <form class="product-form" id="productForm">
+
+
                     <div class="form-row">
                         <label for="product-name">Product Name</label>
                         <input type="text" id="product" placeholder="Product Name" />
@@ -59,7 +63,8 @@
 
                     <div class="form-row">
                         <label for="brand">Choose File</label>
-                        <input type="file" />
+                       <input type="file" id="image" />
+
                     </div>
 
                     <div class="form-row">
@@ -82,11 +87,17 @@
                             <span class="slider"></span>
                         </label>
                     </div>
+                    <div class="form-row">
+                        <button type="submit" class="add-btn">
+                            Add Product
+                        </button>
+                    </div>
+
                 </form>
             </div>
         </section>
     </div>
-    <script type="module" src="product.js"></script>
+    <script type="module" src="addproduct.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 
 </body>
