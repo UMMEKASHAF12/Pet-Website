@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background: #f9f6f6;
+  padding: 10px;
+  margin-left: 20%;
+}
+.products-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 16px;
+}
+
+.products-table thead tr {
+  background: #f3f3f3;
+}
+
+.products-table th {
+  padding: 16px;
+  color:  #e67e22;
+  font-weight: 600;
+  text-align: left;
+}
+
+.products-table tbody tr {
+  background: #f9f9f6;
+  border-radius: 12px;
+}
+
+.products-table td {
+  padding: 16px;
+  vertical-align: middle;
+}
+
+.product-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 10px;
+  background: #fff;
+  padding: 6px;
+  display: block;
+}

@@ -29,7 +29,7 @@ async function signup(e) {
       return;
     }
 
-    alert("Signup successful! Check your email.");
+    alert("Signup successful!");
     console.log(data);
 
   } catch (err) {

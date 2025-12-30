@@ -1,67 +1,58 @@
 body {
-    background-color: #f4f4f4; /* Background behind the card */
-    font-family: 'Quicksand', sans-serif;
+    background-color: #f8f9fa;
+    font-family: 'Roboto', sans-serif;
 }
 
-.heading-font {
-   font-family: "Londrina Solid", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-
-
-.consultation-card {
-    background-color: #e6842a; /* Main Orange Color */
-    max-width: 500px;
-    width: 100%;
-    border-radius: 40px; /* Large rounded corners */
+/* The Main Card Container */
+.main-card {
+    background-color: #e67e22; /* Specific orange tone */
+    border-radius: 25px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    max-width: 900px;
+    width: 100%;
 }
 
-.dog-illustration {
-    position: absolute;
-    top: -60px;
-    left: 20px;
+/* Form Container Padding */
+.form-container {
+    background-color: #e67e22;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.custom-input {
-    border-radius: 30px;
+/* Input Styles */
+.form-control {
+    border: none;
     padding: 12px 20px;
+    font-size: 0.9rem;
+}
+
+.form-control::placeholder {
+    color: #adb5bd;
+}
+
+/* Button Customization */
+.btn-dark {
+    background-color: #0d212d; /* Dark Navy from the image */
     border: none;
-    color: #666;
 }
 
-.custom-input:focus {
-    box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.25);
-    border: none;
+.btn-dark:hover {
+    background-color: #1a3a4d;
 }
 
-.btn-submit {
-    background-color: #3d3430; /* Dark brown/charcoal button */
-    border: none;
-    font-size: 1.1rem;
-    transition: transform 0.2s;
+/* Responsive Image handling */
+.object-fit-cover {
+    object-fit: cover;
 }
 
-.btn-submit:hover {
-    background-color: #ffffff;
-    transform: translateY(-2px);
-    color: #3d3430;
-}
-
-.ls-wide {
-    letter-spacing: 1px;
-}
-
-/* Responsive Adjustments */
-@media (max-width: 576px) {
-    .consultation-card {
-        border-radius: 25px;
-        margin: 10px;
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+    .main-card {
+        margin: 20px;
+        border-radius: 15px;
     }
-    .dog-illustration {
-        width: 70px;
-        top: -45px;
+    .form-container {
+        padding: 30px !important;
     }
 }

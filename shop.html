@@ -1,75 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <title>Product Cards</title>
-
-  <!-- Bootstrap CDN -->
+  <title>Shop Page</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- Font Awesome (Stars + Cart Icon) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
   <link rel="stylesheet" href="shop.css">
 </head>
+
 <body>
-
-<div class="container py-5">
-  <div class="row g-4 justify-content-center">
-
-    <!-- Card 1 -->
-    <div class="col-lg-4 col-md-6 col-sm-10">
-      <div class="product-card">
-        <span class="sale-badge">SALE</span>
-
-        <div class="img-box">
-          <img src="bird1.png" alt="Bird Food">
-        </div>
-
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-
-        <h5>Bird Food Mixture</h5>
-        <p class="price">₹540.00 – ₹670.00</p>
-
-        <button class="cart-btn">
-          <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
+  <div class="container py-5">
+    <div class="row g-4 justify-content-center" id="Products">
+      <!-- Products will be dynamically inserted here -->
     </div>
-
-    <!-- Card 2 -->
-    <div class="col-lg-4 col-md-6 col-sm-10">
-      <div class="product-card">
-
-        <div class="img-box">
-          <img src="bird2.png" alt="Bird Seed">
-        </div>
-
-        <div class="stars">
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="fas fa-star"></i>
-          <i class="far fa-star"></i>
-        </div>
-
-        <h5>Birds Mixed Seed</h5>
-        <p class="price">₹790.00 – ₹980.00</p>
-
-        <button class="cart-btn">
-          <i class="fas fa-shopping-cart"></i>
-        </button>
-      </div>
-    </div>
-
   </div>
-</div>
 
+  <!-- Only include your shop.js module, make sure supabase is configured inside shop.js -->
+  <script type="module" src="shop.js"></script>
 </body>
+
 </html>
+
