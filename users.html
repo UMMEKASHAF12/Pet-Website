@@ -4,21 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Users</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
         rel="stylesheet" />
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="products.css" />
+    <link rel="stylesheet" href="users.css" />
 
 </head>
 
 <body>
     <div class="page-container">
-        <aside class="sidebar">
-            <div class="logo">Fastkart.</div>
+       <aside class="sidebar">
+            <div class="logo">SweetHeart</div>
             <ul class="menu">
                 <a href="./index.html">
                     <li>Dashboard</li>
@@ -38,20 +38,20 @@
                 <li>Reports</li>
             </ul>
         </aside>
-        <div class="products-container">
+        <div class="users">
 
-            
+            <h2 class="Users">Users List</h2>
 
-            <table class="products-table">
+            <table id="userTable" class="users-table">
                 <thead>
                     <tr>
-                        <th>Product Image</th>
-                        <th>Product Name</th>
-                        <th>Price</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Signup Date</th>
                     </tr>
                 </thead>
 
-                <tbody id="productsBody">
+                <tbody id="usersBody">
                     <!-- JS se rows yahan aayengi -->
                 </tbody>
             </table>
@@ -62,7 +62,7 @@
 
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script type="module" src="products.js"></script>
+    <script type="module" src="users.js"></script>
 
 </body>
 

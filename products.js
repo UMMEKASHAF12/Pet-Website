@@ -15,21 +15,11 @@ async function loadProducts() {
   productsBody.innerHTML = "";
 
   products.forEach((product) => {
-  
-    const { publicUrl, error: urlError } = supabase
-      .storage
-      .from("Products")
-      .getPublicUrl(product.img_url);
-
-    if (urlError) {
-      console.error("Error getting public URL:", urlError);
-    }
-
     const tr = document.createElement("tr");
 
     tr.innerHTML = `
       <td>
-        <img src="${publicUrl}" class="product-img" alt="${product.product}" />
+        <img src="${product.img_url}" class="product-img" />
       </td>
       <td>${product.product}</td>
       <td>$${product.price}</td>
@@ -40,3 +30,5 @@ async function loadProducts() {
 }
 
 loadProducts();
+console.log(product.img_url);
+

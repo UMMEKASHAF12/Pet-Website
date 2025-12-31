@@ -10,8 +10,22 @@ body {
   padding: 10px;
   margin-left: 20%;
 }
+.sidebar {
+  width: 20%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #e67e22;
+  padding: 30px 20px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.1);
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .products-table {
-  width: 100%;
+  width: 90%;
   border-collapse: separate;
   border-spacing: 0 16px;
 }
@@ -24,7 +38,7 @@ body {
   padding: 16px;
   color:  #e67e22;
   font-weight: 600;
-  text-align: left;
+  text-align: center;
 }
 
 .products-table tbody tr {
@@ -34,15 +48,17 @@ body {
 
 .products-table td {
   padding: 16px;
-  vertical-align: middle;
+text-align: center;
 }
 
 .product-img {
-  width: 60px;
-  height: 60px;
+  width: 100px;
+  height: 100px;
   object-fit: contain;
   border-radius: 10px;
   background: #fff;
   padding: 6px;
   display: block;
+  margin: 0 auto;
+  
 }
