@@ -20,23 +20,47 @@ async function loadProducts() {
 
         productList.innerHTML = ""; // clear previous content
 
-        data.forEach(product => {
-            const card = document.createElement("div");
-            card.classList.add("col-lg-4", "col-md-6", "col-sm-10");
-            card.innerHTML = `
+       data.forEach(product => {
+            // Check if product has a price range or a single price
+            const priceDisplay = product.max_price 
+                ? `₹${product.price}.00 – <br> ₹${product.max_price}.00` 
+                : `₹${product.price}.00`;
+
+            const productHTML = `
+            <div class="col-12 col-md-6 col-lg-3">
                 <div class="product-card">
+                    ${product.limited ? '<span class="limited-badge">LIMITED</span>' : ''}
+                    
                     <div class="img-box">
                         <img src="${product.img_url}" alt="${product.name}">
                     </div>
-                    <h5>${product.name}</h5>
-                    <p class="price">₹${product.price}</p>
-                    <p>${product.category}</p>
-                    <p>${product.description}</p>
-                </div>
-            `;
-            productList.appendChild(card);
-        });
 
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star text-secondary" style="opacity: 0.3;"></i>
+                    </div>
+
+                    <h5>${product.product}</h5>
+
+                    <p class="price">
+                        ${priceDisplay}
+                    </p>
+
+                    <div class="cart-section">
+                        <button class="cart-btn">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>`;
+            
+            // CRITICAL: This line adds the card to your page
+            productList.insertAdjacentHTML('beforeend', productHTML);
+        });
+                
     } catch (error) {
         console.error("Unexpected error:", error);
     }
